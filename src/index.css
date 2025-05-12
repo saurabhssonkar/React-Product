@@ -55,3 +55,18 @@
   font-weight: bold;
   color: black; /* Tailwind's blue-700 */
 }
+ 
+.btn{
+  padding: 10px 20px;
+  color:  #ec4899;
+  border:  1px solid #e99dc3 ;
+  background: white;
+  font-size: 20px;
+}
+
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}

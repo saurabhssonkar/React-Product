@@ -37,31 +37,36 @@ const ProductSections = () => {
   return (
     <div className='main'>
 
-    
-    <div className="container">
-      {collections.map((collection) => {
-        const product = productsByCollection[collection._id];
 
-        return (
-          <div key={collection._id} className="section">
-            <h2 className="section-title">{collection.name.trim()}</h2>
-            <div className="products-grid">
-              {product?.images?.map((imgUrl, index) => (
-                <div key={index} className="product-card">
-                  <img
-                    src={imgUrl}
-                    alt={product.name}
-                    className="product-image"
-                  />
-                  <div className="product-name">{product.name}</div>
-                  <div className="product-price">₹{product.price}</div>
-                </div>
-              ))}
+      <div className="container">
+        {collections.map((collection) => {
+          const product = productsByCollection[collection._id];
+
+          return (
+            <div key={collection._id} className="section">
+              <h2 className="section-title">{collection.name.trim()}</h2>
+              <div className="products-grid">
+                {product?.images?.map((imgUrl, index) => (
+                  <div key={index} className="product-card">
+                    <img
+                      src={imgUrl}
+                      alt={product.name}
+                      className="product-image"
+                    />
+                    <div className="product-name">{product.name}</div>
+                    <div className="product-price">₹{product.price}</div>
+                  </div>
+                ))}
+
+              </div>
+              <div className="button-wrapper">
+                <button className="btn">View All</button>
+              </div>
+
             </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
