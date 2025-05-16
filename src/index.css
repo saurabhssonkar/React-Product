@@ -21,13 +21,21 @@
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 16px;
+  
 }
 
 .products-grid {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  overflow-x: auto; /* enables horizontal scroll */
   gap: 24px;
+  width: 500px; /* or any fixed width */
+  padding-bottom: 8px; /* optional for visual breathing space */
 }
+/* .products-grid::-webkit-scrollbar {
+  display: none; 
+} */
+
 
 .product-card {
   width: 200px;
@@ -36,7 +44,7 @@
 }
 
 .product-image {
-  width: 100%;
+  width: 200px;
   height: 192px; /* 48 * 4 = 192px (Tailwind's h-48) */
   object-fit: cover;
   border-radius: 8px;
